@@ -1,0 +1,275 @@
+---
+title: "Guided Project: Statistical Transformations and Coordinate Systems"
+subtitle: "CIS-3901 · Module 12"
+author: "Samuel Taylor"
+date: today
+format:
+  html:
+    toc: true
+    code-fold: false
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: project-root
+#| include: false
+# The report runs from reports/; this makes the code run from the project
+# folder, so the script's paths (data/...) work here too.
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+```
+
+```{r}
+#| label: read-script
+#| include: false
+# All the code lives in the script. Each empty chunk below takes the code
+# with that "## ---- name ----" label there, and shows it with its output.
+knitr::read_chunk("scripts/gp12_stats_coords.R")
+```
+
+```{r}
+#| label: setup
+#| include: false
+```
+
+```{r}
+#| label: helpers
+#| include: false
+```
+
+<!--
+How to use this template
+- Replace every line that starts with "WRITE:" with your own sentences.
+- Replace "Your Name" above (a first name or initials is fine: this page is
+  public).
+- Replace each fig-alt with one sentence describing what YOUR plot shows.
+- Render, then commit and push (Guided Project page, step 5).
+-->
+
+## My data
+
+Fairness: Adult; Sports: MMA_Decisions. Each: 
+Adult - One row is one person (5000 Rows); 
+MMA_Decisions - One row is one match (5000 Rows).
+
+
+```{r}
+#| label: data
+#| echo: true
+```
+
+## Part A · Fairness
+
+**My group:** Sex. **My outcome:** income == ">50K".
+
+**Question A:** For each gender, 1015/3343 Males meet the criteria, and 180/1657 Females meet the criteria.
+**Question B:** Of everyone with an income over 50K, Males have a 0.304 rate and Females have a 0.109 rate.
+
+### A0 · My group and my outcome
+
+```{r}
+#| label: a0
+#| echo: true
+```
+
+```{r}
+#| label: a0-check
+#| include: false
+```
+
+### A1 · The rate within each group (question A)
+
+```{r}
+#| label: fig-a1
+#| ref.label: a1
+#| echo: true
+#| fig-cap: "Share of each group with the outcome."
+#| fig-alt: "The plot shows what portion of each gender meets the criteria of having an income over 50K"
+```
+
+```{r}
+#| label: a1-check
+#| include: false
+```
+
+WRITE (2–3 sentences): I predicted males would have a higher rate of meeting the criteria; the plot has also reflected this. Males have a higher rate and proportion of incomes over 50k, while females have the lower rate. When we divide by the group's own total, it makes our conclusion far easier to defend when reading for ratios.
+
+### A2 · Rates with their standard error
+
+```{r}
+#| label: fig-a2
+#| ref.label: a2
+#| echo: true
+#| fig-cap: "Rate in each group, with ± one standard error and the group size."
+#| fig-alt: "The plot shows that males and females have a similar margin of error, but males have far higher proportion of crieria-met."
+```
+
+```{r}
+#| label: a2-check
+#| include: false
+```
+
+WRITE (2–3 sentences): Neither range is comparably wider; however, if the smaller group was wider, it would show that the smaller sample varied by much. This plot keeps the small group visible, while showing the confidence level in the data point's location.
+
+### A3 · Zoom or filter?
+
+```{r}
+#| label: fig-a3
+#| ref.label: a3
+#| echo: true
+#| fig-cap: "Counts per group: from 0, zoomed and filtered."
+#| fig-subcap: ["From 0", "Zoomed", "Filtered"]
+#| fig-alt: "The three plots show that the count of males is far higher than the count of females."
+#| layout: [[1, 1, 1]]
+```
+
+```{r}
+#| label: a3-check
+#| include: false
+```
+
+The zoomed plot's Lie Factor (largest vs smallest group) is
+`r round(a3_lie_factor, 1)`.
+
+WRITE (3–4 sentences): The counts plot displays the total amount of males and females;  the zoom plot shows the same, but cuts off to where the female count looks smaller-- finally, the filter plot shows nothing, as the data falls outside of the scale range. The lie factor supports our idea of how the zoom plot is warped, stating that the size of the bars would roughly 1.504 the size. Considering publishing, I feel that the simple counts plot would reflect the most accurate data.
+
+### A4 · Each group's share of everyone with the outcome (question B)
+
+```{r}
+#| label: fig-a4
+#| ref.label: a4
+#| echo: true
+#| fig-cap: "Each group's share of everyone with the outcome."
+#| fig-alt: "The plot shows the share of how many from each group are within the criteria's bounds; it is displayed that the accounted group is primarily made up of males"
+```
+
+```{r}
+#| label: a4-check
+#| include: false
+```
+
+WRITE (2–3 sentences): Questions A and B point to the same conclusion; this is due to the fact that fewer females within their group are in the outcome, and therefore make up the minority of the outcome group.
+
+## Part B · Sports
+
+**My group, outcome and value:** Rounds, Agreement, and Judge1_Margin
+
+### B0 · My group, outcome and value
+
+```{r}
+#| label: b0
+#| echo: true
+```
+
+```{r}
+#| label: b0-check
+#| include: false
+```
+
+### B1 · The rate within each group
+
+```{r}
+#| label: fig-b1
+#| ref.label: b1
+#| echo: true
+#| fig-cap: "Share of each group with the outcome."
+#| fig-alt: "The plot shows that the agreement rate in 3 and 5 round matches are roughly around 0.75, and the rate of agreement in 12 round matches is closer to 0.5"
+```
+
+```{r}
+#| label: b1-check
+#| include: false
+```
+
+WRITE (2 sentences): The plot displays the rate of agreement; shares is a more comparable way to consider the agreement ratio in each category of fight, as there are far fewer fights in the 5 and 12 round matches compared to the 3 round matches.
+
+### B2 · A mean with its two spreads
+
+```{r}
+#| label: fig-b2
+#| ref.label: b2
+#| echo: true
+#| fig-cap: "Mean in each group, with ± one standard error and group size."
+#| fig-alt: "This plot shows the rate of matches with an agreement = true based on judge1_margin."
+```
+
+```{r}
+#| label: b2-check
+#| include: false
+```
+
+```{r}
+#| label: tbl-b2
+#| tbl-cap: "Group size, mean, sd and se."
+#| echo: false
+knitr::kable(b2_summary, digits = 3)
+```
+
+WRITE (2–3 sentences):The groups of 5 and 12 rounds have a fairly wide margin, but it is slimmed significantly when considering the standard deviation. This tells us that although there is a large gap between the averages of these score margins, there is a much smaller gap when considering the lower end of the possible score margin in the 12 round matches.
+
+### B3 · Zoom or filter?
+
+```{r}
+#| label: fig-b3
+#| ref.label: b3
+#| echo: true
+#| fig-cap: "Counts per group: zoomed and filtered."
+#| fig-subcap: ["Zoomed", "Filtered"]
+#| fig-alt: "The zoomed plot shows the close-up difference between each group, while the filtered plot shows nothing because the numbers fall outside of the lower bound"
+#| layout: [[1, 1]]
+```
+
+```{r}
+#| label: b3-check
+#| include: false
+```
+
+WRITE (2–3 sentences): The lie factor of our zoomed plot is about 1.9948; this may lead to the reader concluding that the rate of agreement in 12 round matches would be close to 0, while the filtered graph would show no rates whatsoever.
+
+### B4 · Each group's share of everyone with the outcome
+
+```{r}
+#| label: fig-b4
+#| ref.label: b4
+#| echo: true
+#| fig-cap: "Each group's share of everyone with the outcome."
+#| fig-alt: "The shares plot shows very few of the agreed matches are made up of 12 round matches, while an overwhelming majority is from the 3 round matches"
+```
+
+```{r}
+#| label: b4-check
+#| include: false
+```
+
+WRITE (2 sentences): Both point the same direction, that in general, judges tend to agree more on 3 round matches versus other groups.
+
+## Checks
+
+```{r}
+#| label: checks-table
+#| include: false
+```
+
+```{r}
+#| label: tbl-checks
+#| tbl-cap: "Every task's check, at the time this page was rendered."
+#| echo: false
+knitr::kable(checks_table)
+```
+
+## AI use
+
+WRITE: one public line only: "AI use: I used [tool] to [what for]." or
+"AI use: none." (Your AI log and conversations go in Blackboard, never here:
+Guided Project page, step 6.)
+
+## References
+
+WRITE: References: 
+Becker, B. & Kohavi, R. (1996). *Adult* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20. Accessed through Fairlearn (`fetch_adult`).
+MMA decisions. MMA Decisions. (n.d.). http://mmadecisions.com/ 
+ESPN Internet Ventures. (n.d.). MMA on ESPN - UFC, PFL and Bellator Fights Coverage. ESPN. https://www.espn.com/mma/ 
+
