@@ -711,7 +711,8 @@ b1 <- b1_base +
     title = "MMA Matches",
     subtitle = "Agreement outcome proportions based on rounds per match",
     x = "Proportions",
-    y = "Rounds/match"
+    y = "Rounds/match",
+    fill ="Agree?"
   )
 
 show_plot(b1)
@@ -732,7 +733,7 @@ b2 <- b_data %>%
   ggplot(aes(x = value, y = after_stat(count / sum(count)))) +
   geom_histogram(bins = 30) +
   scale_y_continuous(labels = scales::percent) +
-  labs(title = "Distribition of our findings based on age", x = "Age (Years, log scale)", y = "Count")
+  labs(title = "Judge1's score margin share from matches collected", x = "Margin (continuous)", y = "Percentage")
 
 
 b2_reason <- "Shares displays what percentage of matches fall where the absolute judge1_margin is in each number within the small scale"
@@ -793,7 +794,7 @@ b4_clouds <- b_data %>%
 b4 <- ggplot(b4_clouds, aes(x = group, y = value)) +
   geom_jitter(width = 0.15, height = 0, alpha = 0.2) +
   facet_wrap(~ kind) +
-  labs(title = "Judge1 Margin with Split and Unanimous match results", x = "Judge1 Margin", y = "Result Type")
+  labs(title = "Judge1 Margin with Split and Unanimous match results", x = "Result Type", y = "Judge1 Margin")
 
 
 show_plot(b4)

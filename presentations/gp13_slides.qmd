@@ -79,7 +79,7 @@ slide after the kickoff. -->
 
 <!-- One sentence, naming the groups you compare. -->
 
-WRITE: your question, naming the groups you compare.
+How does income compare between sexes?
 
 ## Data
 
@@ -89,7 +89,7 @@ Fairness: Adult; Sports: MMA_Decisions. Each:
 Adult - One row is one person (5000 Rows); 
 MMA_Decisions - One row is one match (5000 Rows).
 
-## WRITE: your headline
+## Income Gap Between Sexes
 
 <!-- State the finding in one sentence as this slide's heading, then the
 figure. By default it shows your A3 plot, the version you chose. -->
@@ -97,7 +97,7 @@ figure. By default it shows your A3 plot, the version you chose. -->
 ```{r}
 #| label: fig-headline
 #| ref.label: a3-chosen
-#| fig-alt: "WRITE: one sentence describing what this plot shows."
+#| fig-alt: "This plot shows that about 32% of males make over 50K a year, while only about 12% of females make over 50K a year. "
 ```
 
 ## What it shows, and its limits
@@ -105,13 +105,16 @@ figure. By default it shows your A3 plot, the version you chose. -->
 <!-- Differences, not causes; provenance, small groups, what the data can't
 tell us. -->
 
-- WRITE: the difference the figure shows (differences, not causes).
-- WRITE: where the data come from, which groups are small (their n), and
-  what the data can't tell us.
+- The figure shows that there is a massive gap in how many females make over 50K a year compared to males.
+- The data comes from the DOI. The dataset contains occurrences from 3343 males and 1657 females, about half as many females as males. The data shows us how many make over 50K a year, what kind of employment, education, and marital status; however, it does not tell us the exact job, the family dynamics, the area of living, or the presence of children.
 
 ## Sources and AI use
 
 <!-- Data citation; one-line AI statement (or "none"). -->
 
-- WRITE: data citation (APA), for each dataset you show.
+- Becker, B. & Kohavi, R. (1996). *Adult* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20. Accessed through Fairlearn (`fetch_adult`).
+- MMA decisions. MMA Decisions. (n.d.). http://mmadecisions.com/ 
+- ESPN Internet Ventures. (n.d.). MMA on ESPN - UFC, PFL and Bellator Fights Coverage. ESPN. https://www.espn.com/mma/ 
+
 - WRITE: "AI use: I used [tool] to [what for]." or "AI use: none."
+- No AI was used for this project.

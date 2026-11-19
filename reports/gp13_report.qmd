@@ -90,7 +90,7 @@ MMA_Decisions - One row is one match (5000 Rows).
 #| include: false
 ```
 
-WRITE (1 sentence): Yes; both updated
+Yes; both updated
 
 ### A1 · Label it
 
@@ -99,7 +99,7 @@ WRITE (1 sentence): Yes; both updated
 #| ref.label: a1
 #| echo: true
 #| fig-cap: "Share of each group with the outcome, labeled for a reader."
-#| fig-alt: "WRITE: one sentence describing what this plot shows."
+#| fig-alt: "This plot shows the percentage of males and females who make >50k a year, based on our dataset."
 ```
 
 ```{r}
@@ -107,8 +107,7 @@ WRITE (1 sentence): Yes; both updated
 #| include: false
 ```
 
-WRITE (2 sentences): Which label did you change most, and why? Could a reader
-understand this plot without you there?
+The legend label is the most valuable change; the outcome was not originally listed, and therefore could not be interpreted without access to source code.
 
 ### A2 · Choose a scale
 
@@ -117,7 +116,7 @@ understand this plot without you there?
 #| ref.label: a2
 #| echo: true
 #| fig-cap: "My scale choice."
-#| fig-alt: "WRITE: one sentence describing what this plot shows."
+#| fig-alt: "Using a log10 scale, we can see what ages of participants make up a majority of our data based on a rough bell curve."
 ```
 
 ```{r}
@@ -125,9 +124,7 @@ understand this plot without you there?
 #| include: false
 ```
 
-WRITE (2–3 sentences): Which scale, and why? What does a reader see with it
-that they wouldn't see without it? If values were removed (0 or below on a
-log scale), say how many.
+With the log10scale, readers are more clearly able to see the pattern of what ages are most common in the dataset; no values were removed, but now our graph has a far greater shape.
 
 ### A3 · Facet it: fixed or free
 
@@ -137,7 +134,7 @@ log scale), say how many.
 #| echo: true
 #| fig-cap: "The same rates in panels: fixed and free y-axes."
 #| fig-subcap: ["Fixed", "Free"]
-#| fig-alt: "WRITE: one sentence describing the two plots."
+#| fig-alt: "The fixed axis graph shows us how the two rates compare; the free y-axis graph, however, simply shows us the rate (disproportionately)."
 #| layout: [[1, 1]]
 ```
 
@@ -158,9 +155,7 @@ knitr::kable(a3_rates, digits = 3)
 #| include: false
 ```
 
-WRITE (3–4 sentences): Fixed or free? What does the reader gain, and what do
-they lose? Which panels or groups are small, and what is their n? Describe
-differences, not causes.
+The Fixed axis is most accurate. While the free y-axis graph does show the correct markings per graph, it misleads the reader to believe the rate of males and the rate of females with the outcome of 50K or above is near-even. The females panel is roughly half the count of the males panel, at 1657 compared to 3343, and therefore even a minor change in interpretation could be incorrect.
 
 ### A4 · Compared to what?
 
@@ -169,7 +164,7 @@ differences, not causes.
 #| ref.label: a4
 #| echo: true
 #| fig-cap: "Two groups: individual values and resampled means, same axes."
-#| fig-alt: "WRITE: one sentence describing what this plot shows."
+#| fig-alt: "These plots show that those who work more hours a week are spread roughly evenly, but the means of each group are different."
 ```
 
 ```{r}
@@ -177,8 +172,7 @@ differences, not causes.
 #| include: false
 ```
 
-WRITE (2–3 sentences): Do the clouds overlap? What does that say about
-individuals versus the group means?
+Individual values overlap very frequently, and have similar spread; however, the means show that those who are traditionally married work, on average, more hours per week than those who have never been married.
 
 ### A5 · Color for every reader
 
@@ -189,7 +183,7 @@ individuals versus the group means?
 #| fig-cap: "My colors, with a second cue, and how a reader with red-green color blindness might see them."
 #| fig-subcap: ["My plot", "Red-green (deuteranopia), simulated"]
 #| fig-alt:
-#|   - "WRITE: one sentence describing what this plot shows."
+#|   - "This plot shows, based on our data, the marriage status of our occurances, divided based on sex."
 #|   - "The same plot in the colors a reader with red-green color blindness (deuteranopia) might see."
 #| layout-ncol: 2
 ```
@@ -216,10 +210,7 @@ individuals versus the group means?
 #| include: false
 ```
 
-WRITE (2–4 sentences): Explain your colors. Say which column you colored by
-and why. If your first choice failed the color check, say what you changed:
-fewer categories, grouping rare ones, or panels. Then look at your simulated
-plot: can you still tell the categories apart?
+I have chosen to colour by sex; this allows the data to be interpreted in the simplest division, where we can see that, based on the previous graph, those who are working around 40hrs/week are primarily married, and in this graph we can see which sex makes up that majority.
 
 ## Part B · Sports
 
@@ -230,7 +221,7 @@ plot: can you still tell the categories apart?
 #| ref.label: b1
 #| echo: true
 #| fig-cap: "My Sports plot, labeled for a reader."
-#| fig-alt: "WRITE: one sentence describing what this plot shows."
+#| fig-alt: "The proprotion of how many matches by rounds that judges agree on their decision."
 ```
 
 ```{r}
@@ -238,7 +229,7 @@ plot: can you still tell the categories apart?
 #| include: false
 ```
 
-WRITE (2 sentences): What does the plot show? Which label helps a reader most?
+This plot shows different matches, when divided into the amount of rounds per match, and what share of matches end in an "Agreed" decision. However, the most important label here would be the x-axis, because the factored rounds are not likely to be interpreted correctly otherwise.
 
 ### B2 · Choose a scale
 
@@ -247,7 +238,7 @@ WRITE (2 sentences): What does the plot show? Which label helps a reader most?
 #| ref.label: b2
 #| echo: true
 #| fig-cap: "My scale choice."
-#| fig-alt: "WRITE: one sentence describing what this plot shows."
+#| fig-alt: "This plot shows that, based on a continuous scale, what percentage of matches that judge1's score varies by a particular amount from the average (absolute value)"
 ```
 
 ```{r}
@@ -255,8 +246,7 @@ WRITE (2 sentences): What does the plot show? Which label helps a reader most?
 #| include: false
 ```
 
-WRITE (2–3 sentences): Which scale, and why? If values were removed, say how
-many.
+I went with a continuous scale, as there is not much of a pattern to analyze; instead, a calculation of shares is more important, to see how much higher/lower judge1 voted in a majority of matches, and if they were often in strong agreement.
 
 ### B3 · Facet it: fixed or free
 
@@ -275,9 +265,7 @@ many.
 #| include: false
 ```
 
-WRITE (3–4 sentences): Fixed or free? What does the reader gain, and what do
-they lose? Which panels are small, and what is their n? Differences, not
-causes.
+A fixed scale better represents the percentage of matches that judges agreed on their decision; additionally, 5-round matches are far smaller than 3-round matches, and 12-round matches are even smaller.
 
 ### B4 · Compared to what?
 
@@ -286,7 +274,7 @@ causes.
 #| ref.label: b4
 #| echo: true
 #| fig-cap: "Two groups: individual values and resampled means, same axes."
-#| fig-alt: "WRITE: one sentence describing what this plot shows."
+#| fig-alt: "The plot shows that there is a far higher spread in unanimous decisions by judge1's score margin, while a split decision is mostly consistent; furthermore, the means also differ.."
 ```
 
 ```{r}
@@ -294,8 +282,7 @@ causes.
 #| include: false
 ```
 
-WRITE (2–3 sentences): Do the clouds overlap? What does that say about
-individuals versus the group means?
+Clouds overlap about half of the time; however, this is also due to a higher spread in unanimous decision occurrences. This means individual occurrences are varied highly; additionally, the means are far more condensed, meaning the unanimous decision mean doesnt account for the extremeties as much as the more focused split decision.
 
 ### B5 · Color for every reader
 
@@ -306,7 +293,7 @@ individuals versus the group means?
 #| fig-cap: "My colors, with a second cue, and how a reader with red-green color blindness might see them."
 #| fig-subcap: ["My plot", "Red-green (deuteranopia), simulated"]
 #| fig-alt:
-#|   - "WRITE: one sentence describing what this plot shows."
+#|   - "This plot shos what percent of matches fall in each result type, divided by three values: Agree, Disagree, and Judge (Grouped where one judge has the primary result decision)"
 #|   - "The same plot in the colors a reader with red-green color blindness (deuteranopia) might see."
 #| layout-ncol: 2
 ```
@@ -333,10 +320,7 @@ individuals versus the group means?
 #| include: false
 ```
 
-WRITE (2–4 sentences): Explain your colors. Say which column you colored by
-and why. If your first choice failed the color check, say what you changed:
-fewer categories, grouping rare ones, or panels. Then look at your simulated
-plot: can you still tell the categories apart?
+I divided colours based on agreement value; this originally did not work, as the "judge_" value had too few occurrences; therefore, I grouped them into one category, and now it is far easier to tell them apart. I chose this paneling because even those who cannot see any colours will be able to see the three results and tell them apart by labels.
 
 ## One thing I tried in my slides, and why
 
@@ -377,7 +361,11 @@ WRITE: one public line only: "AI use: I used [tool] to [what for]." or
 "AI use: none." (Your AI log and conversations go in Blackboard, never here:
 Guided Project page.)
 
+No AI used.
+
 ## References
 
-WRITE: APA references for your Fairness dataset (Fairlearn and the original
-source) and your Sports dataset (its SCORE page).
+Becker, B. & Kohavi, R. (1996). *Adult* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20. Accessed through Fairlearn (`fetch_adult`).
+MMA decisions. MMA Decisions. (n.d.). http://mmadecisions.com/ 
+ESPN Internet Ventures. (n.d.). MMA on ESPN - UFC, PFL and Bellator Fights Coverage. ESPN. https://www.espn.com/mma/ 
+
