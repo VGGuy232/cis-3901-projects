@@ -324,9 +324,7 @@ I divided colours based on agreement value; this originally did not work, as the
 
 ## One thing I tried in my slides, and why
 
-WRITE (2–3 sentences): One idea of your own in your slides (an angle, a
-comparison, an order, an annotation), and how it helps a reader see the
-finding.
+I decided to use almost all of my graphs, to illustrate a connection and how our primary data may be skewed due to other metrics in our data.
 
 ## Revision log
 
@@ -356,10 +354,6 @@ knitr::kable(checks_table)
 ```
 
 ## AI use
-
-WRITE: one public line only: "AI use: I used [tool] to [what for]." or
-"AI use: none." (Your AI log and conversations go in Blackboard, never here:
-Guided Project page.)
 
 No AI used.
 
