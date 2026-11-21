@@ -1,6 +1,5 @@
 ---
-# WRITE: What is this about, and who made it? (a title that names your topic)
-title: "Adult and MMA"
+title: "Income Gap Between Sexes"
 author: "Samuel Taylor"
 format:
   revealjs:
@@ -11,6 +10,7 @@ execute:
   message: false
 ---
 
+```{=html}
 <!--
 Edit the code in the script. The report and the slides only read it.
 Your words (findings, headlines, limits) live in the report and the slides.
@@ -28,6 +28,7 @@ How these slides work
 - No speaker notes: anything in "::: notes" is public on the web. Keep it
   out.
 -->
+```
 
 ```{r}
 #| label: project-root
@@ -64,17 +65,6 @@ knitr::read_chunk("scripts/gp13_scales_facets.R")
 #|   - b5
 ```
 
-## Task 0: see it update
-
-<!-- Task 0 (kickoff): find your new title word here. You can remove this
-slide after the kickoff. -->
-
-```{r}
-#| label: fig-a0
-#| ref.label: a0
-#| fig-alt: "Bar chart counting the rows in each group of one column."
-```
-
 ## Question
 
 <!-- One sentence, naming the groups you compare. -->
@@ -85,14 +75,14 @@ How does income compare between sexes?
 
 <!-- Where it's from, what one row is, how many rows. -->
 
-Fairness: Adult; Sports: MMA_Decisions. Each: 
-Adult - One row is one person (5000 Rows); 
-MMA_Decisions - One row is one match (5000 Rows).
+Adult Fairness Dataset - One row is one person (5000 Rows);
 
 ## Income Gap Between Sexes
 
+```{=html}
 <!-- State the finding in one sentence as this slide's heading, then the
 figure. By default it shows your A3 plot, the version you chose. -->
+```
 
 ```{r}
 #| label: fig-headline
@@ -100,21 +90,47 @@ figure. By default it shows your A3 plot, the version you chose. -->
 #| fig-alt: "This plot shows that about 32% of males make over 50K a year, while only about 12% of females make over 50K a year. "
 ```
 
-## What it shows, and its limits
+## Ages of Occurrences
 
+```{r}
+#| label: fig-ages
+#| ref.label: a2
+#| fig-alt: "This plot shows how many people from our data are reported as each age. "
+```
+
+## Marital Status Panelled
+
+```{r}
+#| label: fig-mar
+#| ref.label: a5
+#| fig-alt: "This plot shows the marital status of our data occurrences, panelled by sex"
+```
+
+## Mean hours worked in a week by marital status
+
+```{r}
+#| label: fig-mean
+#| ref.label: a4
+#| fig-alt: "This plot shows how many hours per week a person who is married works, compared to a person who has not married."
+```
+
+## What it shows
+
+```{=html}
 <!-- Differences, not causes; provenance, small groups, what the data can't
 tell us. -->
+```
 
-- The figure shows that there is a massive gap in how many females make over 50K a year compared to males.
+- The figures show that there is a massive gap in how many females make over 50K a year compared to males. There is also a general age range where a majority of our data falls, in the 40s. We also see that, on average, married people work more hours per week than those who have not been married. However, there are less counts of married females in our data compared to males.
+
+## Limits
+
 - The data comes from the DOI. The dataset contains occurrences from 3343 males and 1657 females, about half as many females as males. The data shows us how many make over 50K a year, what kind of employment, education, and marital status; however, it does not tell us the exact job, the family dynamics, the area of living, or the presence of children.
 
 ## Sources and AI use
 
 <!-- Data citation; one-line AI statement (or "none"). -->
 
-- Becker, B. & Kohavi, R. (1996). *Adult* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20. Accessed through Fairlearn (`fetch_adult`).
-- MMA decisions. MMA Decisions. (n.d.). http://mmadecisions.com/ 
-- ESPN Internet Ventures. (n.d.). MMA on ESPN - UFC, PFL and Bellator Fights Coverage. ESPN. https://www.espn.com/mma/ 
+- Becker, B. & Kohavi, R. (1996). *Adult* \[Dataset\]. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20. Accessed through Fairlearn (`fetch_adult`).
 
-- WRITE: "AI use: I used [tool] to [what for]." or "AI use: none."
 - No AI was used for this project.

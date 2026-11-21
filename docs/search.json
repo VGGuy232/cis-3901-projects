@@ -331,23 +331,23 @@
   {
     "objectID": "presentations/gp13_slides.html#task-0-see-it-update",
     "href": "presentations/gp13_slides.html#task-0-see-it-update",
-    "title": "Adult and MMA",
+    "title": "Income Gap Between Sexes",
     "section": "Task 0: see it update",
     "text": "Task 0: see it update\n\n\n\nFigure 1"
   },
   {
     "objectID": "presentations/gp13_slides.html#question",
     "href": "presentations/gp13_slides.html#question",
-    "title": "Adult and MMA",
+    "title": "Income Gap Between Sexes",
     "section": "Question",
     "text": "Question\n\nHow does income compare between sexes?"
   },
   {
     "objectID": "presentations/gp13_slides.html#data",
     "href": "presentations/gp13_slides.html#data",
-    "title": "Adult and MMA",
+    "title": "Income Gap Between Sexes",
     "section": "Data",
-    "text": "Data\n\nFairness: Adult; Sports: MMA_Decisions. Each: Adult - One row is one person (5000 Rows); MMA_Decisions - One row is one match (5000 Rows)."
+    "text": "Data\n\nAdult Fairness Dataset - One row is one person (5000 Rows);"
   },
   {
     "objectID": "presentations/gp13_slides.html#write-your-headline",
@@ -359,15 +359,57 @@
   {
     "objectID": "presentations/gp13_slides.html#what-it-shows-and-its-limits",
     "href": "presentations/gp13_slides.html#what-it-shows-and-its-limits",
-    "title": "Adult and MMA",
+    "title": "Income Gap Between Sexes",
     "section": "What it shows, and its limits",
-    "text": "What it shows, and its limits\n\n\nThe figure shows that there is a massive gap in how many females make over 50K a year compared to males.\nThe data comes from the DOI. The dataset contains occurrences from 3343 males and 1657 females, about half as many females as males. The data shows us how many make over 50K a year, what kind of employment, education, and marital status; however, it does not tell us the exact job, the family dynamics, the area of living, or the presence of children."
+    "text": "What it shows, and its limits\n\n\nThe figures show that there is a massive gap in how many females make over 50K a year compared to males. There is also a general age range where a majority of our data falls, in the 40s. We also see that, on average, married people work more hours per week than those who have not been married. However, there are less counts of married females in our data compared to males.\nThe data comes from the DOI. The dataset contains occurrences from 3343 males and 1657 females, about half as many females as males. The data shows us how many make over 50K a year, what kind of employment, education, and marital status; however, it does not tell us the exact job, the family dynamics, the area of living, or the presence of children."
   },
   {
     "objectID": "presentations/gp13_slides.html#sources-and-ai-use",
     "href": "presentations/gp13_slides.html#sources-and-ai-use",
-    "title": "Adult and MMA",
+    "title": "Income Gap Between Sexes",
     "section": "Sources and AI use",
-    "text": "Sources and AI use\n\n\nBecker, B. & Kohavi, R. (1996). Adult [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20. Accessed through Fairlearn (fetch_adult).\nMMA decisions. MMA Decisions. (n.d.). http://mmadecisions.com/\nESPN Internet Ventures. (n.d.). MMA on ESPN - UFC, PFL and Bellator Fights Coverage. ESPN. https://www.espn.com/mma/\nWRITE: “AI use: I used [tool] to [what for].” or “AI use: none.”\nNo AI was used for this project."
+    "text": "Sources and AI use\n\n\nBecker, B. & Kohavi, R. (1996). Adult [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20. Accessed through Fairlearn (fetch_adult).\nNo AI was used for this project."
+  },
+  {
+    "objectID": "presentations/gp13_slides.html#income-gap-between-sexes",
+    "href": "presentations/gp13_slides.html#income-gap-between-sexes",
+    "title": "Income Gap Between Sexes",
+    "section": "Income Gap Between Sexes",
+    "text": "Income Gap Between Sexes\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "presentations/gp13_slides.html#ages-of-occurrences",
+    "href": "presentations/gp13_slides.html#ages-of-occurrences",
+    "title": "Income Gap Between Sexes",
+    "section": "Ages of Occurrences",
+    "text": "Ages of Occurrences\n\n\nFigure 2"
+  },
+  {
+    "objectID": "presentations/gp13_slides.html#marital-status-panelled",
+    "href": "presentations/gp13_slides.html#marital-status-panelled",
+    "title": "Income Gap Between Sexes",
+    "section": "Marital Status Panelled",
+    "text": "Marital Status Panelled\n\n\nFigure 3"
+  },
+  {
+    "objectID": "presentations/gp13_slides.html#mean-hours-worked-in-a-week-by-marital-status",
+    "href": "presentations/gp13_slides.html#mean-hours-worked-in-a-week-by-marital-status",
+    "title": "Income Gap Between Sexes",
+    "section": "Mean hours worked in a week by marital status",
+    "text": "Mean hours worked in a week by marital status\n\n\nFigure 4"
+  },
+  {
+    "objectID": "presentations/gp13_slides.html#what-it-shows",
+    "href": "presentations/gp13_slides.html#what-it-shows",
+    "title": "Income Gap Between Sexes",
+    "section": "What it shows",
+    "text": "What it shows\n\n\nThe figures show that there is a massive gap in how many females make over 50K a year compared to males. There is also a general age range where a majority of our data falls, in the 40s. We also see that, on average, married people work more hours per week than those who have not been married. However, there are less counts of married females in our data compared to males."
+  },
+  {
+    "objectID": "presentations/gp13_slides.html#limits",
+    "href": "presentations/gp13_slides.html#limits",
+    "title": "Income Gap Between Sexes",
+    "section": "Limits",
+    "text": "Limits\n\nThe data comes from the DOI. The dataset contains occurrences from 3343 males and 1657 females, about half as many females as males. The data shows us how many make over 50K a year, what kind of employment, education, and marital status; however, it does not tell us the exact job, the family dynamics, the area of living, or the presence of children."
   }
 ]
